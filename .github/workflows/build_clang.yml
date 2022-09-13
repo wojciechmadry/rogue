@@ -1,12 +1,12 @@
-name: build
+name: build_clang
 
 on:
   push:
-    branches:  
-      - '**' 
+    branches:
+      - '**'
   pull_request:
     branches:
-       - '**' 
+       - '**'
 
 jobs:
   build:
@@ -19,10 +19,12 @@ jobs:
     - name: Install Dependencies
       run: |
         sudo apt update
-        sudo apt -y install g++ gcc libncurses5-dev libncursesw5-dev
-        
+        sudo apt -y install clang libncurses5-dev libncursesw5-dev
+
     - name: Build
       run: |
+        export CC=clang
+        export CXX=clang++
         mkdir -p build
         cd build
         cmake ../
