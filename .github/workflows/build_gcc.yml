@@ -1,0 +1,31 @@
+name: build_gcc
+
+on:
+  push:
+    branches:  
+      - '**' 
+  pull_request:
+    branches:
+       - '**' 
+
+jobs:
+  build:
+
+    runs-on: ubuntu-22.04
+
+    steps:
+    - uses: actions/checkout@v3
+
+    - name: Install Dependencies
+      run: |
+        sudo apt update
+        sudo apt -y install g++ gcc libncurses5-dev libncursesw5-dev
+        
+    - name: Build
+      run: |
+        export CC=gcc
+        export CXX=g++
+        mkdir -p build
+        cd build
+        cmake ../
+        cmake --build . -j

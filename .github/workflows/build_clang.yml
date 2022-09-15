@@ -1,0 +1,31 @@
+name: build_clang
+
+on:
+  push:
+    branches:
+      - '**'
+  pull_request:
+    branches:
+       - '**'
+
+jobs:
+  build:
+
+    runs-on: ubuntu-22.04
+
+    steps:
+    - uses: actions/checkout@v3
+
+    - name: Install Dependencies
+      run: |
+        sudo apt update
+        sudo apt -y install clang libncurses5-dev libncursesw5-dev
+
+    - name: Build
+      run: |
+        export CC=clang
+        export CXX=clang++
+        mkdir -p build
+        cd build
+        cmake ../
+        cmake --build . -j
