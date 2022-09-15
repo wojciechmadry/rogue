@@ -23,7 +23,7 @@
 void
 init_player()
 {
-    register THING *obj;
+    THING *obj;
 
     pstats = max_stats;
     food_left = HUNGERTIME;
@@ -239,7 +239,7 @@ static bool used[MAX3(NCOLORS, NSTONES, NWOOD)];
 void
 init_colors()
 {
-    register int i, j;
+    int i, j;
 
     for (i = 0; i < NCOLORS; i++)
 	used[i] = FALSE;
@@ -262,9 +262,9 @@ init_colors()
 void
 init_names()
 {
-    register int nsyl;
-    register char *cp, *sp;
-    register int i, nwords;
+    int nsyl;
+    char *cp, *sp;
+    int i, nwords;
 
     for (i = 0; i < MAXSCROLLS; i++)
     {
@@ -296,7 +296,7 @@ init_names()
 void
 init_stones()
 {
-    register int i, j;
+    int i, j;
 
     for (i = 0; i < NSTONES; i++)
 	used[i] = FALSE;
@@ -318,8 +318,8 @@ init_stones()
 void
 init_materials()
 {
-    register int i, j;
-    register char *str;
+    int i, j;
+    char *str;
     static bool metused[NMETAL];
 
     for (i = 0; i < NWOOD; i++)

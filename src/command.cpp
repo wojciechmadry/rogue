@@ -23,8 +23,8 @@
 void
 command()
 {
-    register char ch;
-    register int ntimes = 1;			/* Number of player moves */
+    char ch;
+    int ntimes = 1;			/* Number of player moves */
     char *fp;
     THING *mp;
     static char countch, direction, newcount = FALSE;
@@ -473,9 +473,9 @@ illcom(int ch)
 void
 search()
 {
-    register int y, x;
-    register char *fp;
-    register int ey, ex;
+    int y, x;
+    char *fp;
+    int ey, ex;
     int probinc;
     bool found;
 
@@ -537,9 +537,9 @@ foundone:
 void
 help()
 {
-    register struct h_list *strp;
-    register char helpch;
-    register int numprint, cnt;
+    struct h_list *strp;
+    char helpch;
+    int numprint, cnt;
     msg("character you want help for (* for all): ");
     helpch = readchar();
     mpos = 0;
@@ -607,9 +607,9 @@ help()
 void
 identify()
 {
-    register int ch;
-    register struct h_list *hp;
-    register char *str;
+    int ch;
+    struct h_list *hp;
+    char *str;
     static struct h_list ident_list[] = {
 	{'|',		"wall of a room",		FALSE},
 	{'-',		"wall of a room",		FALSE},
@@ -719,10 +719,10 @@ levit_check()
 void
 call()
 {
-    register THING *obj;
-    register struct obj_info *op = NULL;
-    register char **guess, *elsewise = NULL;
-    register bool *know;
+    THING *obj;
+    struct obj_info *op = NULL;
+    char **guess, *elsewise = NULL;
+    bool *know;
 
     obj = get_item("call", CALLABLE);
     /*

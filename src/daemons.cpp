@@ -20,7 +20,7 @@
 void
 doctor()
 {
-    register int lv, ohp;
+    int lv, ohp;
 
     lv = pstats.s_lvl;
     ohp = pstats.s_hpt;
@@ -94,7 +94,7 @@ unconfuse()
 void
 unsee()
 {
-    register THING *th;
+    THING *th;
 
     for (th = mlist; th != NULL; th = next(th))
 	if (on(*th, ISINVIS) && see_monst(th))
@@ -138,7 +138,7 @@ nohaste()
 void
 stomach()
 {
-    register int oldfood;
+    int oldfood;
     int orig_hungry = hungry_state;
 
     if (food_left <= 0)
@@ -193,8 +193,8 @@ stomach()
 void
 come_down()
 {
-    register THING *tp;
-    register bool seemonst;
+    THING *tp;
+    bool seemonst;
 
     if (!on(player, ISHALU))
 	return;
@@ -241,8 +241,8 @@ come_down()
 void
 visuals()
 {
-    register THING *tp;
-    register bool seemonst;
+    THING *tp;
+    bool seemonst;
 
     if (!after || (running && jump))
 	return;

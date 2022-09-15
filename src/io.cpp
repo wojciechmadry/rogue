@@ -170,7 +170,7 @@ readchar()
 void
 status()
 {
-    register int oy, ox, temp;
+    int oy, ox, temp;
     static int hpwidth = 0;
     static int s_hungry = 0;
     static int s_lvl = 0;
@@ -246,7 +246,7 @@ status()
 void
 wait_for(int ch)
 {
-    register char c;
+    char c;
 
     if (ch == '\n')
         while ((c = readchar()) != '\n' && c != '\r')

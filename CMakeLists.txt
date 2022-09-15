@@ -1,5 +1,6 @@
 cmake_minimum_required(VERSION 3.17)
 project(RogueLinuxCpp)
+set(CMAKE_CXX_STANDARD 20)
 
 # Define either of KEYS_QWERTY or KEYS_DVORAK below
 add_definitions(-DKEYS_QWERTY)
@@ -43,7 +44,7 @@ add_library(rogue_lib STATIC
         src/armor.cpp
 )
 
-set_target_properties(rogue_lib PROPERTIES LINKER_LANGUAGE C)
+set_target_properties(rogue_lib PROPERTIES LINKER_LANGUAGE CXX)
 target_compile_options(rogue_lib PRIVATE ${COMPILER_FLAGS})
 
 add_executable(rogue 
@@ -56,5 +57,5 @@ include_directories(${CURSES_INCLUDE_DIR})
 target_link_libraries(rogue rogue_lib ${CURSES_LIBRARIES})
 # -------------------
 
-set_target_properties(rogue PROPERTIES LINKER_LANGUAGE C)
+set_target_properties(rogue PROPERTIES LINKER_LANGUAGE CXX)
 target_compile_options(rogue PRIVATE ${COMPILER_FLAGS})
