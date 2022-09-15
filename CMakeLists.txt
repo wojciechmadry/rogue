@@ -5,11 +5,15 @@ set(CMAKE_CXX_STANDARD 20)
 # Define either of KEYS_QWERTY or KEYS_DVORAK below
 add_definitions(-DKEYS_QWERTY)
 
-include_directories(include)
+# NCourses library
+find_package(Curses REQUIRED)
+
+# Include directories
+include_directories(include ${CURSES_INCLUDE_DIR})
 
 set(COMPILER_FLAGS "-O3")
 
-add_library(rogue_lib STATIC
+add_library(rogue_lib SHARED
         src/xcrypt.cpp
         src/wizard.cpp
         src/weapons.cpp
@@ -46,16 +50,16 @@ add_library(rogue_lib STATIC
 
 set_target_properties(rogue_lib PROPERTIES LINKER_LANGUAGE CXX)
 target_compile_options(rogue_lib PRIVATE ${COMPILER_FLAGS})
+target_link_libraries(rogue_lib ${CURSES_LIBRARIES})
 
 add_executable(rogue 
         src/main.cpp
 )
 
-#   ncourses library
-find_package(Curses REQUIRED)
-include_directories(${CURSES_INCLUDE_DIR})
 target_link_libraries(rogue rogue_lib ${CURSES_LIBRARIES})
-# -------------------
 
 set_target_properties(rogue PROPERTIES LINKER_LANGUAGE CXX)
 target_compile_options(rogue PRIVATE ${COMPILER_FLAGS})
+
+# Boost Test Library
+add_subdirectory(tests)

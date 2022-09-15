@@ -10,6 +10,9 @@
  * See the file LICENSE.TXT for full copyright and licensing information.
  */
 
+#ifndef ROGUE_HPP_
+#define ROGUE_HPP_
+
 #include "extern.hpp"
 #include <curses.h>
 
@@ -65,8 +68,6 @@
 #define attach(a,b)	_attach(&a,b)
 #define detach(a,b)	_detach(&a,b)
 #define free_list(a)	_free_list(&a)
-#undef max
-#define max(a,b)	((a) > (b) ? (a) : (b))
 #define on(thing,flag)	((bool)(((thing).t_flags & (flag)) != 0))
 #define GOLDCALC	(rnd(50 + 10 * level) + 2)
 #define ISRING(h,r)	(cur_ring[h] != NULL && cur_ring[h]->o_which == r)
@@ -753,3 +754,5 @@ extern char     *wood[];
 extern int      cNWOOD;
 extern char     *metal[];
 extern int      cNMETAL;
+
+#endif // ROGUE_HPP_

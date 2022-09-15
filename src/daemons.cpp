@@ -220,10 +220,16 @@ come_down()
     {
 	move(tp->t_pos.y, tp->t_pos.x);
 	if (cansee(tp->t_pos.y, tp->t_pos.x))
-	    if (!on(*tp, ISINVIS) || on(player, CANSEE))
-		addch(tp->t_disguise);
+	{
+		if (!on(*tp, ISINVIS) || on(player, CANSEE))
+		{
+			addch(tp->t_disguise);
+		}
 	    else
-		addch(chat(tp->t_pos.y, tp->t_pos.x));
+		{
+			addch(chat(tp->t_pos.y, tp->t_pos.x));
+		}
+	}
 	else if (seemonst)
 	{
 	    standout();

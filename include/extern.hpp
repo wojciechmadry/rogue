@@ -10,6 +10,8 @@
  * See the file LICENSE.TXT for full copyright and licensing information.
  */
 
+#ifndef EXTERN_HPP_
+#define EXTERN_HPP_
 
 #include <bits/types/FILE.h>
 #ifdef HAVE_CONFIG_H
@@ -196,3 +198,4 @@ void md_onsignal_exit();
 void md_onsignal_default();
 int md_issymlink(char *sp);
 
+#endif // EXTERN_HPP_

@@ -29,3 +29,7 @@ jobs:
         cd build
         cmake ../
         cmake --build . -j
+
+    - name: Test
+      run: |
+        ./build/tests/tests_rogue

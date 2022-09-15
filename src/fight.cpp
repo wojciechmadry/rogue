@@ -10,6 +10,7 @@
  * See the file LICENSE.TXT for full copyright and licensing information.
  */
 
+#include <algorithm>
 #include <stdlib.h>
 #include <curses.h>
 #include <string.h>
@@ -468,7 +469,7 @@ roll_em(THING *thatt, THING *thdef, THING *weap, bool hurl)
 		debug("Damage for %dx%d came out %d, dplus = %d, add_dam = %d, def_arm = %d", ndice, nsides, proll, dplus, add_dam[att->s_str], def_arm);
 #endif
 	    damage = dplus + proll + add_dam[att->s_str];
-	    def->s_hpt -= max(0, damage);
+	    def->s_hpt -= std::max(0, damage);
 	    did_hit = TRUE;
 	}
 	if ((cp = strchr(cp, '/')) == NULL)

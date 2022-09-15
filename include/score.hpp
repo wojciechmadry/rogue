@@ -10,6 +10,11 @@
  * See the file LICENSE.TXT for full copyright and licensing information.
  */
 
+#ifndef SCORE_HPP_
+#define SCORE_HPP_
+
+#include "extern.hpp"
+
 struct sc_ent {
     unsigned int sc_uid;
     int sc_score;
@@ -24,3 +29,5 @@ typedef struct sc_ent SCORE;
 
 void	rd_score(SCORE *top_ten);
 void	wr_score(SCORE *top_ten);
+
+#endif // SCORE_HPP_
