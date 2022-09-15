@@ -13,7 +13,7 @@ include_directories(include ${CURSES_INCLUDE_DIR})
 
 set(COMPILER_FLAGS "-O3")
 
-add_library(rogue_lib SHARED
+add_library(rogue_lib STATIC
         src/xcrypt.cpp
         src/wizard.cpp
         src/weapons.cpp
