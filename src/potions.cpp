@@ -294,7 +294,7 @@ turn_see(bool turn_off)
 	    if (!can_see)
 	    {
 		standend();
-		add_new++;
+		add_new = TRUE;
 	    }
 	}
     }

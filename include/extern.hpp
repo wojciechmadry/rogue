@@ -145,7 +145,7 @@ void    quit(int);
 void    resetltchars(void);
 void	rollwand();
 void	runners();
-void	set_order();
+void	set_order(int *order, int numthings);
 void	sight();
 void	stomach();
 void	swander();

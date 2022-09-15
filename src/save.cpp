@@ -36,7 +36,7 @@ save_game()
 {
     FILE *savef;
     int c;
-    auto char buf[MAXSTR];
+    char buf[MAXSTR];
 
     /*
      * get file name

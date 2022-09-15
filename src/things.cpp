@@ -426,7 +426,7 @@ print_disc(char type)
 	    info = ws_info;
 	    break;
     }
-    set_order();
+    set_order(order, maxnum);
     obj.o_count = 1;
     obj.o_flags = 0;
     num_found = 0;

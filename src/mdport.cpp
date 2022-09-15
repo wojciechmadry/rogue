@@ -623,7 +623,7 @@ md_getrealname(int uid)
 #endif
 }
 
-extern char *xcrypt(char *key, char *salt);
+extern char *xcrypt(const char *key,const char *salt);
 
 char *
 md_crypt(char *key, char *salt)
