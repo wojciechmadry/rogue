@@ -19,7 +19,7 @@ jobs:
     - name: Install Dependencies
       run: |
         sudo apt update
-        sudo apt -y install g++ gcc libncurses5-dev libncursesw5-dev
+        sudo apt -y install g++ gcc libncurses5-dev libncursesw5-dev libboost-all-dev
         
     - name: Build
       run: |
