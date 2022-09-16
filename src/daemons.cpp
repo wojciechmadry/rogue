@@ -27,21 +27,30 @@ doctor()
     quiet++;
     if (lv < 8)
     {
-	if (quiet + (lv << 1) > 20)
-	    pstats.s_hpt++;
+		if (quiet + (lv << 1) > 20)
+		{
+			pstats.s_hpt++;
+		}
     }
-    else
-	if (quiet >= 3)
-	    pstats.s_hpt += rnd(lv - 7) + 1;
+    else if (quiet >= 3)
+		pstats.s_hpt += rnd(lv - 7) + 1;
     if (ISRING(LEFT, R_REGEN))
-	pstats.s_hpt++;
+	{
+		pstats.s_hpt++;
+	}
+
     if (ISRING(RIGHT, R_REGEN))
-	pstats.s_hpt++;
+	{
+		pstats.s_hpt++;
+	}
+
     if (ohp != pstats.s_hpt)
     {
-	if (pstats.s_hpt > max_hp)
-	    pstats.s_hpt = max_hp;
-	quiet = 0;
+		if (pstats.s_hpt > max_hp)
+		{
+			pstats.s_hpt = max_hp;
+		}
+		quiet = 0;
     }
 }
 

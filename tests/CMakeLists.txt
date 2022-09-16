@@ -4,6 +4,8 @@ include_directories (${Boost_INCLUDE_DIRS})
 
 add_executable(tests_rogue
 test_main.cpp
+extern/come_down.cpp
+extern/doctor.cpp
 )
 
 target_link_libraries(tests_rogue

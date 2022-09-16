@@ -4,7 +4,7 @@
 
 BOOST_AUTO_TEST_SUITE(extern_hpp)
 
-BOOST_AUTO_TEST_CASE( come_down_cpp )
+BOOST_AUTO_TEST_CASE( come_down_fun )
 {
     for(std::int16_t i = 0 ; i <= 1000 ; ++i)
     {

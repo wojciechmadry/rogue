@@ -5,7 +5,7 @@ Function to be tested
 
 - [X] auto_save(int) (Can't test)
 - [X] come_down()
-- [ ] doctor()
+- [X] doctor()
 - [ ] end_line()
 - [ ] endit(int sig)
 - [ ] fatal(const char* s)
