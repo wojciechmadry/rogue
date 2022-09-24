@@ -7,6 +7,7 @@ test_main.cpp
 extern/come_down.cpp
 extern/doctor.cpp
 extern/getltchars.cpp
+extern/land.cpp
 )
 
 target_link_libraries(tests_rogue
