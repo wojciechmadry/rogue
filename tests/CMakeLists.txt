@@ -8,6 +8,7 @@ extern/come_down.cpp
 extern/doctor.cpp
 extern/getltchars.cpp
 extern/land.cpp
+extern/nohaste.cpp
 )
 
 target_link_libraries(tests_rogue

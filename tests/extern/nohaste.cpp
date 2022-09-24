@@ -5,8 +5,10 @@
 BOOST_AUTO_TEST_SUITE(extern_hpp)
 
 
-BOOST_AUTO_TEST_CASE( land_fun )
+BOOST_AUTO_TEST_CASE( nohaste_fun )
 {
+    BOOST_REQUIRE_EQUAL(player.t_flags, 0);
+
     init_player();
     BOOST_REQUIRE_EQUAL(player.t_flags, 0);
 
@@ -16,8 +18,8 @@ BOOST_AUTO_TEST_CASE( land_fun )
         clrtoeol();
         mpos = 0;
         player.t_flags = i;
-        land();
-        BOOST_REQUIRE_EQUAL(player.t_flags, i & (~ISLEVIT));
+        nohaste();
+        BOOST_REQUIRE_EQUAL(player.t_flags, i & (~ISHASTE));
     }
     
 
