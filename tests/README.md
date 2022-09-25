@@ -19,7 +19,7 @@ Function to be tested
 - [X] print_disc(char) (Can't test)
 - [X] quit(int) (Can't test)
 - [x] resetltchars(void)
-- [ ] rollwand()
+- [X] rollwand()
 - [ ] runners()
 - [ ] set_order(int *order, int numthings)
 - [ ] sight()

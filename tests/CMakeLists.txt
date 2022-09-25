@@ -11,6 +11,7 @@ extern/land.cpp
 extern/nohaste.cpp
 extern/playltchars.cpp
 extern/resetltchars.cpp
+extern/rollwand.cpp
 )
 
 target_link_libraries(tests_rogue
