@@ -5,15 +5,15 @@
 BOOST_AUTO_TEST_SUITE(extern_hpp)
 
 
-BOOST_AUTO_TEST_CASE( getltchars_fun )
+BOOST_AUTO_TEST_CASE( resetltchars_fun )
 {
     BOOST_REQUIRE_EQUAL(got_ltc, false);
     BOOST_REQUIRE_EQUAL(orig_dsusp, 0);
-    getltchars();
-    BOOST_REQUIRE_EQUAL(got_ltc, true);
+    resetltchars();
+    BOOST_REQUIRE_EQUAL(got_ltc, false);
     BOOST_REQUIRE_EQUAL(orig_dsusp, 0);
-    getltchars();
-    BOOST_REQUIRE_EQUAL(got_ltc, true);
+    resetltchars();
+    BOOST_REQUIRE_EQUAL(got_ltc, false);
     BOOST_REQUIRE_EQUAL(orig_dsusp, 0);
     got_ltc = false;
 }
