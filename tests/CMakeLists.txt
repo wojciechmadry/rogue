@@ -9,6 +9,7 @@ extern/doctor.cpp
 extern/getltchars.cpp
 extern/land.cpp
 extern/nohaste.cpp
+extern/playltchars.cpp
 )
 
 target_link_libraries(tests_rogue

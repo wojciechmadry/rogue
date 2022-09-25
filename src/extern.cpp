@@ -515,8 +515,8 @@ playit()
 
     oldpos = hero;
     oldrp = roomin(&hero);
-    while (playing)
-	command();			/* Command execution */
+   // while (playing)
+	//command();			/* Command execution */
     endit(0);
 }
 
