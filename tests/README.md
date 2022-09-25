@@ -16,7 +16,7 @@ Function to be tested
 - [X] nohaste()
 - [X] playit() (Can't test)
 - [X] playltchars(void)
-- [ ] print_disc(char)
+- [X] print_disc(char) (Can't test)
 - [ ] quit(int)
 - [ ] resetltchars(void)
 - [ ] rollwand()
